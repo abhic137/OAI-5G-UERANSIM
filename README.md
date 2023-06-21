@@ -38,4 +38,5 @@ Running iperf server on external DN container
 docker exec -it oai-ext-dn iperf3 -s
 docker exec -it ueransim iperf3 -c 192.168.73.135 -B 12.2.1.2
 ```
-
+refrence:
+https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/-/blob/master/docs/DEPLOY_SA5G_WITH_UERANSIM.md
