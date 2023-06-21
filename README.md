@@ -16,6 +16,14 @@ sudo docker ps -a
 ```
 ## UERANSIM logs
 ```
-docker logs ueransim
+docker logs ueransim #you will get UE ip in the last line
 ```
 ## Ping test
+*Here we ping UE from external DN container
+```
+sudo docker exec -it oai-ext-dn ping -c 3 <UE_IP>
+```
+*Here we ping external DN from UE (UERANSIM) container
+```
+sudo docker exec ueransim ping -c 3 -I uesimtun0 google.com
+```
