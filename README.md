@@ -2,13 +2,13 @@
 Simulated UE and RAN connected to OAI 5GC
 ## For running the core services
 ```
-sudo docker-compose -f docker-compose-basic-vpp-nrf.yaml up -d
+sudo docker compose -f docker-compose-basic-vpp-nrf.yaml up -d
 
 ```
 ## For running virtual UE and RAN
 
 ```
-sudo docker-compose -f docker-compose-ueransim-vpp.yaml up -d
+sudo docker compose -f docker-compose-ueransim-vpp.yaml up -d
 ```
 ## Check if all the services are running 
 ```
@@ -16,11 +16,12 @@ sudo docker ps -a
 ```
 ## UERANSIM logs
 ```
-docker logs ueransim #you will get UE ip in the last line
+sudo docker logs ueransim #you will get UE ip in the last line
 ```
 ## AMF logs
+Here you can check if the gNg and UE are connected
 ```
-docker logs -follow oai-amf
+sudo docker logs --follow oai-amf
 ```
 ## Ping test
 * Here we ping UE from external DN container
